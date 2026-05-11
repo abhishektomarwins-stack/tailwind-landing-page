@@ -9,109 +9,660 @@
   </head>
   <body class="bg-white font-sans text-text">
 
-    <!-- Navbar -->
-    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur">
+    <header class="sticky top-0 z-50 bg-white">
       <div
         class="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 md:h-20 lg:px-8">
 
         <a href="#"
-          class="flex min-w-0 items-center gap-2 text-lg font-bold text-heading no-underline sm:text-xl">
+          class="flex items-center gap-2 text-lg text-heading no-underline sm:text-xl">
           <img src="src/assets/images/svg/logo.svg" alt="Nexcent logo"
-            class="h-8 w-8 shrink-0" />
+            class="h-8 w-8" />
           Nexcent
         </a>
 
-        <nav class="hidden items-center gap-6 md:flex lg:gap-8"
-          aria-label="Primary navigation">
-          <a href="#"
-            class="text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Home</a>
-          <a href="#"
-            class="text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Features</a>
-          <a href="#"
-            class="text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Community</a>
-          <a href="#"
-            class="text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Blog</a>
-          <a href="#"
-            class="text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Pricing</a>
-        </nav>
+        <div class="hidden md:flex items-center gap-6">
+          <nav class="flex items-center gap-6 lg:gap-8">
+            <a href="#home"
+              class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary">Home</a>
+            <a href="#"
+              class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary">Features</a>
+            <a href="#community"
+              class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary">Community</a>
+            <a href="#"
+              class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary">Blog</a>
+            <a href="#"
+              class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary">Pricing</a>
+          </nav>
+          <button
+            class="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-6 py-3 text-sm font-bold text-white ">
+            Register Now
+            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+          </button>
+        </div>
 
         <button
-          class="inline-flex cursor-pointer items-center gap-2 border-0 bg-primary px-6 py-3 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-300 hover:bg-primary-dark hover:shadow-primary max-md:hidden">
-          Register Now
-          <i class="fa-solid fa-arrow-right text-base" aria-hidden="true"></i>
-        </button>
-
-        <button
-          class="inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-border-soft bg-white text-heading transition-colors duration-300 hover:border-primary hover:text-primary md:hidden"
-          type="button"
-          id="mobileMenuButton"
-          aria-controls="mobileMenu"
-          aria-expanded="false"
-          aria-label="Open menu">
+          class="md:hidden inline-flex h-10 w-10 cursor-pointer items-center justify-center border border-border-soft bg-white text-heading "
+          type="button" id="mobileMenuButton" aria-controls="mobileMenu"
+          aria-expanded="false" aria-label="Open menu">
           <i class="fa-solid fa-bars text-lg" aria-hidden="true"></i>
         </button>
       </div>
 
-      <!-- Mobile menu -->
       <div
-        class="hidden border-t border-border-soft bg-surface px-4 pb-5 pt-2 shadow-sm sm:px-6 md:hidden"
+        class="hidden absolute top-full left-0 right-0 border-t border-border-soft bg-surface px-4 pb-5 pt-2 shadow-sm sm:px-6 md:hidden"
         id="mobileMenu">
-        <nav class="flex flex-col" aria-label="Mobile navigation">
+        <nav class="flex flex-col">
+          <a href="#home"
+            class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary border-b border-border-soft py-3">Home</a>
           <a href="#"
-            class="border-b border-border-soft py-3 text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Home</a>
+            class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary border-b border-border-soft py-3">Features</a>
+          <a href="#community"
+            class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary border-b border-border-soft py-3">Community</a>
           <a href="#"
-            class="border-b border-border-soft py-3 text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Features</a>
+            class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary border-b border-border-soft py-3">Blog</a>
           <a href="#"
-            class="border-b border-border-soft py-3 text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Community</a>
-          <a href="#"
-            class="border-b border-border-soft py-3 text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Blog</a>
-          <a href="#"
-            class="py-3 text-sm font-medium text-heading no-underline transition-colors duration-300 hover:text-primary">Pricing</a>
+            class="text-sm font-bold text-heading no-underline transition-colors duration-300 hover:text-primary py-3">Pricing</a>
         </nav>
         <button
-          class="mt-3 inline-flex w-full cursor-pointer items-center justify-center gap-2 border-0 bg-primary px-6 py-3 text-sm font-semibold text-white transition-[background-color,box-shadow] duration-300 hover:bg-primary-dark hover:shadow-primary">
+          class="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-6 py-3 text-sm font-bold text-white  mt-3 w-full justify-center">
           Register Now
-          <i class="fa-solid fa-arrow-right text-base" aria-hidden="true"></i>
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
         </button>
       </div>
     </header>
 
     <section class="bg-surface">
       <div
-        class="mx-auto max-w-6xl flex flex-col items-center justify-between gap-10 px-4 py-16 sm:px-6 lg:flex-row lg:px-8 lg:py-24">
+        class="mx-auto max-w-6xl flex flex-col lg:flex-row items-center justify-between gap-10 px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
 
-        <div class="max-w-xl text-center lg:text-left">
-          <h1
-            class="text-4xl font-semibold leading-tight tracking-tight text-heading sm:text-5xl xl:text-5xl">
+        <div class="max-w-xl w-full text-left sm:text-center lg:text-left">
+          <h1 class="text-4xl sm:text-5xl font-bold leading-tight text-heading">
             Lessons and insights
             <span class="block text-primary">from 8 years</span>
           </h1>
-          <p class="mt-6 text-base leading-8 text-text">
+          <p class="mt-6 text-base font-bold leading-8 text-text">
             Where to grow your business as a photographer: site or social media?
           </p>
-          <div class="mt-10 flex justify-center lg:justify-start">
+          <div
+            class="mt-10 flex justify-start sm:justify-center lg:justify-start">
             <a href="#"
-              class="inline-flex items-center justify-center rounded bg-primary px-8 py-4 text-sm font-semibold text-white shadow-primary transition duration-300 hover:bg-primary-dark">
-              Register
-            </a>
+              class="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-8 py-4 text-sm font-bold text-white ">Register</a>
           </div>
         </div>
 
-        <div class="w-full max-w-md shrink-0">
-          <img src="src/assets/images/banner.webp"
-            alt="Business dashboard illustration"
-            class="mx-auto w-full object-contain" />
+        <div class="hidden lg:block w-full max-w-md">
+          <img src="src/assets/images/banner.webp" alt="Dashboard illustration"
+            class="w-full object-contain" />
         </div>
 
       </div>
 
-      <div class="flex items-center justify-center gap-2 pb-10"
-        aria-label="Slide indicators">
-        <span class="h-3 w-3 rounded-full bg-primary"></span>
-        <span class="h-2 w-2 rounded-full bg-gray-300"></span>
-        <span class="h-2 w-2 rounded-full bg-gray-300"></span>
+      <div class="flex items-center justify-center gap-2 pb-10">
+        <span class="h-2 w-2 rounded-full bg-primary"></span>
+        <span class="h-2 w-2 rounded-full bg-border-soft opacity-30"></span>
+        <span class="h-2 w-2 rounded-full bg-border-soft opacity-30"></span>
       </div>
     </section>
 
-  </body>
-</html>
+    <section class="bg-white">
+      <div
+        class="mx-auto max-w-6xl px-4 sm:px-6 py-16 text-left sm:text-center">
+
+        <h2 class="text-4xl font-bold text-heading">Our Clients</h2>
+        <p class="mt-3 font-bold text-text">We have been working with some
+          Fortune 500+ clients <div
+            class="mt-10 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:flex lg:justify-between items-center gap-8 lg:gap-0">
+            <a href="#"
+              class="logo">
+              <img src="src/assets/images/svg/logo-1.svg" alt="Client logo"
+                class="h-12 w-auto" />
+            </a>
+            <a href="#"
+              class="logo">
+              <img src="src/assets/images/svg/logo-2.svg" alt="Client logo"
+                class="h-12 w-auto" />
+            </a>
+            <a href="#"
+              class="logo">
+              <img src="src/assets/images/svg/logo-3.svg" alt="Client logo"
+                class="h-12 w-auto" />
+            </a>
+            <a href="#"
+              class="logo">
+              <img src="src/assets/images/svg/logo-4.svg" alt="Client logo"
+                class="h-12 w-auto" />
+            </a>
+            <a href="#"
+              class="logo">
+              <img src="src/assets/images/svg/logo-5.svg" alt="Client logo"
+                class="h-12 w-auto" />
+            </a>
+            <a href="#"
+              class="logo">
+              <img src="src/assets/images/svg/logo-6.svg" alt="Client logo"
+                class="h-12 w-auto" />
+            </a>
+            <a href="#"
+              class="logo">
+              <img src="src/assets/images/svg/logo-3.svg" alt="Client logo"
+                class="h-12 w-auto" />
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div
+          class="mx-auto max-w-7xl px-4 sm:px-6 py-10 sm:py-16 text-left sm:text-center">
+
+          <h2
+            class="text-2xl sm:text-3xl md:text-4xl font-bold text-heading leading-tight">
+            Manage your entire community<br />in a single system
+          </h2>
+          <p class="mt-4 text-text">Who is Nextcent suitable for?</p>
+
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-5">
+
+            <div
+              class="rounded-2xl border-b border-border-color p-6 sm:p-8">
+              <div class="flex justify-start sm:justify-center mb-6">
+                <img src="src/assets/images/svg/membership.svg" alt="Membership"
+                  class="w-16 h-16 sm:w-20 sm:h-20" />
+              </div>
+              <h3
+                class="text-xl sm:text-2xl font-bold text-heading mb-3">Membership<br>Organisations</h3>
+              <p class="text-text leading-relaxed">Our membership management
+                software provides full automation of membership renewals and
+                payments</p>
+            </div>
+
+            <div
+              class="rounded-2xl border-b border-border-color p-6 sm:p-8">
+              <div class="flex justify-start sm:justify-center mb-6">
+                <img src="src/assets/images/svg/national.svg"
+                  alt="National Associations"
+                  class="w-16 h-16 sm:w-20 sm:h-20" />
+              </div>
+              <h3
+                class="text-xl sm:text-2xl font-bold text-heading mb-3">National<br>Associations</h3>
+              <p class="text-text leading-relaxed">Our membership management
+                software provides full automation of membership renewals and
+                payments</p>
+            </div>
+
+            <div
+              class="rounded-2xl border-b border-border-color p-6 sm:p-8 ">
+              <div class="flex justify-start sm:justify-center mb-6">
+                <img src="src/assets/images/svg/clubs.svg"
+                  alt="Clubs And Groups"
+                  class="w-16 h-16 sm:w-20 sm:h-20" />
+              </div>
+              <h3 class="text-xl sm:text-2xl font-bold text-heading mb-3">Clubs
+                And<br>Groups</h3>
+              <p class="text-text leading-relaxed">Our membership management
+                software provides full automation of membership renewals and
+                payments</p>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div
+          class="mx-auto max-w-6xl px-4 sm:px-6 py-10 lg:py-15 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+          <div class="w-full max-w-sm flex justify-center">
+            <img src="src/assets/images/spending.webp"
+              alt="Three years at Pixelgrade"
+              class="w-full max-w-md object-contain" />
+          </div>
+
+          <div class="w-full text-left sm:text-center lg:text-left">
+            <h2 class="text-3xl sm:text-4xl  text-heading">
+              The unseen of spending three years at Pixelgrade
+            </h2>
+            <p class="text-text mt-5 ">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit
+              amet justo ipsum. Sed accumsan quam vitae est varius fringilla.
+              Pellentesque placerat vestibulum lorem sed porta. Nullam mattis
+              tristique iaculis. Nullam pulvinar sit amet risus pretium auctor.
+              Etiam quis massa pulvinar, aliquam quam vitae, tempus sem. Donec
+              elementum pulvinar odio.
+            </p>
+            <div
+              class="mt-8 flex justify-start sm:justify-center lg:justify-start">
+              <a href="#"
+                class="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-8 py-4 text-sm font-bold text-white ">Learn
+                More</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="bg-surface">
+        <div
+          class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 lg:py-15 flex flex-col lg:flex-row items-center gap-10 lg:gap-16">
+          <div class="flex-1 text-left sm:text-center lg:text-left">
+            <h2
+              class="text-3xl sm:text-4xl text-heading leading-tight font-sans">
+              Helping a local
+              <span class="block text-primary">business reinvent itself</span>
+            </h2>
+
+            <p class="mt-5 text-base text-text font-sans">
+              We reached here with our hard work and dedication
+            </p>
+          </div>
+
+          <div
+            class="flex-1 grid grid-cols-2 gap-x-8 sm:gap-x-12 lg:gap-x-16 gap-y-8 sm:gap-y-10">
+
+            <div class="flex items-center gap-3">
+              <img
+                src="src/assets/images/svg/members.svg"
+                alt="Members"
+                class="w-8 h-8 sm:w-10 sm:h-10 object-contain shrink-0" />
+
+              <div>
+                <h3
+                  class="text-xl sm:text-2xl font-bold text-heading leading-none">
+                  2,245,341
+                </h3>
+
+                <p class="mt-1 text-sm text-text">
+                  Members
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <img
+                src="src/assets/images/svg/club-c.svg"
+                alt="Club"
+                class="w-8 h-8 sm:w-10 sm:h-10 object-contain shrink-0" />
+
+              <div>
+                <h3
+                  class="text-xl sm:text-2xl font-bold text-heading leading-none">
+                  46,328
+                </h3>
+
+                <p class="mt-1 text-sm text-text">
+                  Clubs
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <img
+                src="src/assets/images/svg/events.svg"
+                alt="Event Bookings"
+                class="w-8 h-8 sm:w-10 sm:h-10 object-contain shrink-0" />
+
+              <div>
+                <h3
+                  class="text-xl sm:text-2xl font-bold text-heading leading-none">
+                  828,867
+                </h3>
+
+                <p class="mt-1 text-sm text-text">
+                  Event Bookings
+                </p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3">
+              <img
+                src="src/assets/images/svg/payments.svg"
+                alt="Payments"
+                class="w-8 h-8 sm:w-10 sm:h-10 object-contain shrink-0" />
+              <div>
+                <h3
+                  class="text-xl sm:text-2xl font-bold text-heading leading-none">
+                  1,926,436
+                </h3>
+
+                <p class="mt-1 text-sm text-text">
+                  Payments
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white">
+        <div
+          class="mx-auto max-w-6xl px-4 sm:px-6 py-10 lg:py-15 flex flex-col lg:flex-row items-center justify-between gap-10">
+
+          <div class="w-full max-w-sm flex justify-center">
+            <img src="src/assets/images/site-footer.webp"
+              alt="Three years at Pixelgrade"
+              class="w-full max-w-md object-contain" />
+          </div>
+
+          <div class="w-full text-left sm:text-center lg:text-left">
+            <h2 class="text-3xl sm:text-4xl text-heading">
+              How to design your site footer like we did </h2>
+            <p class="text-text mt-5 ">
+              Donec a eros justo. Fusce egestas tristique ultrices. Nam tempor,
+              augue nec tincidunt molestie, massa nunc varius arcu, at
+              scelerisque
+              elit erat a magna. Donec quis erat at libero ultrices mollis. In
+              hac
+              habitasse platea dictumst. Vivamus vehicula leo dui, at porta nisi
+              facilisis finibus. In euismod augue vitae nisi ultricies, non
+              aliquet urna tincidunt. Integer in nisi eget nulla commodo
+              faucibus
+              efficitur quis massa. Praesent felis est, finibus et nisi ac,
+              hendrerit venenatis libero. Donec consectetur faucibus ipsum id
+              gravida.
+            </p>
+            <div
+              class="mt-8 flex justify-start sm:justify-center lg:justify-start">
+              <a href="#"
+                class="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-8 py-4 text-sm font-bold text-white ">Learn
+                More</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="bg-surface">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-5">
+
+          <div
+            class="grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-12 items-start">
+
+            <div class="flex justify-center lg:justify-start">
+              <img
+                src="src/assets/images/maecenas.webp"
+                alt="Client showcase"
+                class="w-70 h-70 object-cover rounded-md" />
+            </div>
+
+            <div class="max-w-187">
+
+              <p class="text-[15px] text-text mb-2">
+                Maecenas dignissim justo eget nulla rutrum molestie.
+                Maecenas lobortis sem dui, vel rutrum risus tincidunt
+                ullamcorper. Proin eu enim metus. Vivamus sed libero
+                ornare, tristique quam in, gravida enim. Nullam ut
+                molestie arcu, at hendrerit elit. Morbi laoreet elit at
+                ligula molestie, nec molestie mi blandit. Suspendisse
+                cursus tellus sed augue ultrices, quis tristique nulla
+                sodales. Suspendisse eget lorem eu turpis vestibulum
+                pretium. Quisque malesuada enim sapien, vitae placerat
+                ante feugiat eget. Quisque vulputate odio neque, eget
+                efficitur libero condimentum id. Curabitur id nibh id
+                sem dignissim finibus ac sit amet magna.
+              </p>
+
+              <div class="mb-8">
+                <h3 class="text-[20px] font-semibold text-primary mb-2">
+                  Tim Smith
+                </h3>
+
+                <p class="text-sm text-text">
+                  British Dragon Boat Racing Association
+                </p>
+              </div>
+
+              <div class="flex flex-wrap items-center gap-15">
+                <img
+                  src="src/assets/images/svg/logo-1.svg"
+                  alt="Logo"
+                  class="h-8 w-auto" />
+
+                <img
+                  src="src/assets/images/svg/logo-2.svg"
+                  alt="Logo"
+                  class="h-8 w-auto" />
+
+                <img
+                  src="src/assets/images/svg/logo-3.svg"
+                  alt="Logo"
+                  class="h-8 w-auto" />
+
+                <img
+                  src="src/assets/images/svg/logo-4.svg"
+                  alt="Logo"
+                  class="h-8 w-auto" />
+
+                <img
+                  src="src/assets/images/svg/logo-5.svg"
+                  alt="Logo"
+                  class="h-8 w-auto" />
+
+                <img
+                  src="src/assets/images/svg/logo-6.svg"
+                  alt="Logo"
+                  class="h-8 w-auto" />
+
+                <a
+                  href="#"
+                  class="inline-flex items-center gap-3 text-primary font-semibold whitespace-nowrap">
+                  Meet all customers
+
+                  <i
+                    class="fa-solid fa-arrow-right text-sm"
+                    aria-hidden="true"></i>
+                </a>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="bg-white py-16 lg:py-24">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+
+          <div class="text-left sm:text-center mb-14">
+            <h2 class="text-4xl font-bold text-heading">Caring is the new
+              marketing</h2>
+            <p class="mt-4 text-base text-text sm:mx-auto"
+              style="max-width:600px">
+              The Nextcent blog is the best place to read about the latest
+              membership insights,
+              trends and more. See who's joining the community, read about how
+              our community are
+              increasing their membership income and lot's more.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+            <article class="group relative flex flex-col cursor-pointer">
+              <div class="overflow-hidden rounded-xl h-64">
+                <img
+                  src="src/assets/images/streamlined.webp"
+                  alt="Creating Streamlined Safeguarding Processes with OneRen"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div
+                class="relative mx-4 -mt-20 bg-surface rounded-xl shadow-md p-6 text-center flex flex-col gap-4">
+                <h3 class="text-xl font-semibold text-text leading-snug">
+                  Creating Streamlined Safeguarding Processes with OneRen
+                </h3>
+                <a href="#"
+                  class="inline-flex items-center justify-center gap-1 text-primary font-semibold">
+                  Read more
+                  <i class="fa-solid fa-arrow-right text-s"
+                    aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="group relative flex flex-col cursor-pointer">
+              <div class="overflow-hidden rounded-xl h-64">
+                <img
+                  src="src/assets/images/safeguarding.webp"
+                  alt="What are your safeguarding responsibilities and how can you manage them?"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div
+                class="relative mx-4 -mt-20 bg-surface rounded-xl shadow-md p-6 text-center flex flex-col gap-4">
+                <h3 class="text-xl font-semibold text-text leading-snug">
+                  What are your safeguarding responsibilities and how can you
+                  manage them?
+                </h3>
+                <a href="#"
+                  class="inline-flex items-center justify-center gap-1 text-primary font-semibold">
+                  Read more
+                  <i class="fa-solid fa-arrow-right text-s"
+                    aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+            <article class="group relative flex flex-col cursor-pointer">
+              <div class="overflow-hidden rounded-xl h-64">
+                <img
+                  src="src/assets/images/revamping.webp"
+                  alt="Revamping the Membership Model with Triathlon Australia"
+                  class="w-full h-full object-cover" />
+              </div>
+              <div
+                class="relative mx-4 -mt-20 bg-surface rounded-xl shadow-md p-6 text-center flex flex-col gap-4">
+                <h3 class="text-xl font-semibold text-text leading-snug">
+                  Revamping the Membership Model with Triathlon Australia
+                </h3>
+                <a href="#"
+                  class="inline-flex items-center justify-center gap-1 text-primary font-semibold">
+                  Read more
+                  <i class="fa-solid fa-arrow-right text-s"
+                    aria-hidden="true"></i>
+                </a>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-surface py-15">
+        <div
+          class="mx-auto max-w-5xl px-4 sm:px-6 flex flex-col items-center text-center gap-10">
+          <h2
+            class="text-3xl sm:text-4xl lg:text-6xl font-bold text-heading leading-tight max-w-175">
+            Pellentesque suscipit fringilla libero eu.
+          </h2>
+          <a
+            href="#"
+            class="inline-flex cursor-pointer items-center gap-2 rounded-sm border-0 bg-primary px-8 py-4 text-base font-bold text-white ">
+            Get a Demo
+            <i class="fa-solid fa-arrow-right "></i>
+          </a>
+
+        </div>
+      </section>
+
+      <footer class="bg-footer">
+        <div class="mx-auto max-w-6xl px-4 sm:px-6 py-14 lg:py-16">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
+
+            <!-- Brand col: full width on mobile & sm, 1 col on lg -->
+            <div
+              class="flex flex-col items-center sm:items-start gap-5 sm:col-span-2 lg:col-span-1">
+              <a href="#"
+                class="flex items-center gap-2 text-2xl font-bold text-white no-underline">
+                <img src="src/assets/images/svg/logo.svg" alt="Nexcent logo"
+                  class="h-8 w-8" />
+                Nexcent
+              </a>
+              <p
+                class="text-sm text-gray-300 leading-relaxed text-center sm:text-left">
+                Copyright &copy; 2020 Landify UI Kit.<br />All rights reserved
+              </p>
+              <div class="flex items-center gap-3">
+                <a href="#" aria-label="Instagram"
+                  class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-colors">
+                  <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Dribbble"
+                  class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-colors">
+                  <i class="fab fa-dribbble" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Twitter"
+                  class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-colors">
+                  <i class="fab fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#" aria-label="Youtube"
+                  class="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-gray-300 hover:bg-white/20 transition-colors">
+                  <i class="fab fa-youtube" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <!-- Company -->
+            <div class="flex flex-col items-center sm:items-start gap-4">
+              <h3 class="text-lg font-semibold text-white">Company</h3>
+              <ul class="flex flex-col items-center sm:items-start gap-3">
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">About
+                    us</a></li>
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Blog</a></li>
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Contact
+                    us</a></li>
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Pricing</a></li>
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Testimonials</a></li>
+              </ul>
+            </div>
+
+            <!-- Support -->
+            <div class="flex flex-col items-center sm:items-start gap-4">
+              <h3 class="text-lg font-semibold text-white">Support</h3>
+              <ul class="flex flex-col items-center sm:items-start gap-3">
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Help
+                    center</a></li>
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Terms
+                    of service</a></li>
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Legal</a></li>
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Privacy
+                    policy</a></li>
+                <li><a href="#"
+                    class="text-sm text-gray-300 hover:text-white transition-colors">Status</a></li>
+              </ul>
+            </div>
+
+            <!-- Newsletter: full width on sm, 1 col on lg -->
+            <div
+              class="flex flex-col items-center sm:items-start gap-4 sm:col-span-2 lg:col-span-1">
+              <h3 class="text-lg font-semibold text-white">Stay up to date</h3>
+              <form class="flex w-full max-w-sm mx-auto sm:mx-0"
+                onsubmit="return false;">
+                <input type="email" placeholder="Your email address"
+                  aria-label="Email address"
+                  class="w-full rounded-l-lg bg-white/10 px-4 py-2.5 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-1 focus:ring-white/30" />
+                <button type="submit" aria-label="Subscribe"
+                  class="flex shrink-0 items-center justify-center rounded-r-lg bg-white/10 px-3.5 py-2.5 text-white hover:bg-white/20 transition-colors">
+                  <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </footer>
+
+    </body>
+  </html>
